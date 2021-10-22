@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: #1c1a1a;
+  font-family: Bahnschrift;
+  scroll-behavior: smooth;
+}
+
+//navigation bar style
+a {
+
+}
+
+.nav-content ul {
+list-style: none;
+  display: flex;
+}
+ul {
+  list-style-type: none;
+}
+
+.nav-content ul li a {
+  color: rgb(10, 10, 23);
+  padding: 1.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: all .5s ease;
+  opacity: 0.6;
+  text-decoration: none;
+  list-style-type: none;
+
+}
+.nav-content ul li a:hover {
+  color: rgb(255, 255, 255);
+  background: #ff1476;
+}
+
+
+.nav-content {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  align-items:  center;
+  width: 100%;
+  margin: auto;
+  background: #fff;
+}
+
+// logo style
+.logoImg {
+  width: 120px;
+  height: auto;
+}
+
+//main container style
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 80px;
+}
+
+.work-area, .contact {
+  background-color: #ddd;
+}
+
+.content-area {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+section h3.header-text {
+  text-transform: uppercase;
+  font-family: Arial;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 45px;
+}
+section p {
+  max-width: 700px;
+  line-height: 2px;
+  padding: 0 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  section {
+    padding: 50px 20px;
+  }
+}
+
+//header {
+//position: absolute;
+//  width: 100%;
+//  display: flex;
+//  justify-content: space-between;
+//  align-items: center;
+//  //padding: 35px 100px 0;
+//  animation: 1s animate 0.5s forwards;
+//  opacity: 0;
+//  color: #fff;
+//  z-index: 10;
+//}
+//
+//@keyframes animate {
+//100%{
+//  opacity: 1;
+//}
+//
+//}
+
+@media (max-width: 800px) {
+  header {
+    padding: 20px 50px;
+    flex-direction: column;
+  }
+  .logoImg {
+    margin-bottom: 15px;
+  }
+  header div.nav-content nav ul li {
+    margin: 0 7px;
+  }
+}
+
+.banner-area {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.banner-area .img-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  background-image: linear-gradient(to left, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/image/body/body.jpg);
+  background-position: center center;
+}
+
+
+
