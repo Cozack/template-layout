@@ -20,7 +20,7 @@ span {
   align-items:  center;
   width: 100%;
   margin: auto;
-  background: #fff;
+  background: #8f8a8a;
 }
 
 .nav-content ul {
@@ -122,12 +122,12 @@ section p {
   .banner-area h1 {
     margin-bottom: 15px;
     font-size: 60px;
+    color: #00FFFFFF;
   }
 
-  .banner-area h3 {
-    margin-bottom: 40px;
-    font-size: 25px;
-  }
+.center_div{
+  margin-bottom: 40px;
+}
 
   .banner-text {
     opacity: 0;
@@ -254,4 +254,3 @@ footer p a {
   color: aqua;
   text-decoration: none;
 }
-

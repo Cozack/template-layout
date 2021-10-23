@@ -21,7 +21,7 @@ span {
   align-items: center;
   width: 100%;
   margin: auto;
-  background: #fff;
+  background: #8f8a8a;
 }
 
 .nav-content ul {
@@ -121,11 +121,11 @@ section p {
 .banner-area h1 {
   margin-bottom: 15px;
   font-size: 60px;
+  color: #00FFFFFF;
 }
 
-.banner-area h3 {
+.center_div {
   margin-bottom: 40px;
-  font-size: 25px;
 }
 
 .banner-text {
