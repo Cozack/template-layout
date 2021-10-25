@@ -1,0 +1,70 @@
+@media (max-width: 800px) {
+  section {
+    padding: 50px 20px;
+  }
+
+  section h3.header-text {
+    font-size: 30px;
+  }
+}
+@media (max-width: 800px) {
+  header {
+    padding: 20px 50px;
+    flex-direction: column;
+  }
+
+  .logoImg {
+    margin-bottom: 15px;
+  }
+
+  header div.nav-content nav ul li {
+    margin: 0 7px;
+  }
+}
+@media (max-width: 800px) {
+  .banner-area {
+    min-height: 600px;
+  }
+
+  .banner-area h1 {
+    font-size: 28px;
+  }
+
+  .banner-area h3 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1000px) {
+  .services-area .content-area .single-service {
+    flex-basis: 30%;
+  }
+}
+@media (max-width: 800px) {
+  .services-area .content-area .single-service {
+    flex-basis: 100%;
+  }
+
+  .single-service {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 800px) {
+  .work-area .content-area li {
+    flex-basis: 100%;
+    padding: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .newsletter form input {
+    flex-basis: 100%;
+    margin: 0 0 20px 0;
+  }
+}
+@media (max-width: 800px) {
+  .content .content-area .single-contact {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */
