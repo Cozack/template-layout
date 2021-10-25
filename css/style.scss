@@ -98,7 +98,7 @@ section p {
   height: 100%;
   background-size: cover;
   z-index: -1;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/image/bg/bg.jpg);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/image/bg/bg.png);
   background-position: center center;
 }
 
@@ -143,15 +143,15 @@ section p {
 }
 
 .on-air-concert {
-  background-image: url(/image/icon-area/on-air.jpg);
+  background-image: url(/image/iconArea/onair.png);
 }
 
 .club-concert {
-  background-image: url(/image/icon-area/club.jpg);
+  background-image: url(/image/iconArea/club.png);
 }
 
 .quarantine-concert {
-  background-image: url(/image/icon-area/quarantine-concertjpg.jpg);
+  background-image: url(/image/iconArea/quarantineconcert.png);
 }
 
 .icon-area i {
@@ -175,7 +175,7 @@ section p {
 
 //SUBSCRIBE section style
 .newsletter {
-  background-image: url(/image/main-content/subscribe-logo.jpg);
+  background-image: url(/image/mainContent/subscribelogo.png);
   background-size: 100%;
   height: 300px;
 }
