@@ -141,15 +141,15 @@ section p {
 }
 
 .on-air-concert {
-  background-image: url("/image/iconArea/onair.png");
+  background-image: url("https://cozack.github.io/template-layout/image/iconArea/onair.png");
 }
 
 .club-concert {
-  background-image: url("/image/iconArea/club.png");
+  background-image: url("https://cozack.github.io/template-layout/image/iconArea/club.png");
 }
 
 .quarantine-concert {
-  background-image: url("/image/iconArea/quarantineconcert.png");
+  background-image: url("https://cozack.github.io/template-layout/image/iconArea/quarantineconcert.png");
 }
 
 .icon-area i {
@@ -172,7 +172,7 @@ section p {
 }
 
 .newsletter {
-  background-image: url("/image/mainContent/subscribelogo.png");
+  background-image: url("https://cozack.github.io/template-layout/image/mainContent/subscribelogo.png");
   background-size: 100%;
   height: 300px;
 }
