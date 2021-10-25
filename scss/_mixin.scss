@@ -1,0 +1,30 @@
+@import "colors";
+
+@mixin sectionStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 80px;
+}
+
+@mixin alignItems {
+  justify-content: center;
+  text-align: center;
+}
+
+@mixin mainInput {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 1px solid $light_black;
+}
+
+@mixin inputSubmit {
+  background: $btn_bg_yellow;
+  border: none;
+  font-size: 16px;
+  font-family: Marlett;
+  text-transform: uppercase;
+  font-weight: bold;
+}

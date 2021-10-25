@@ -1,3 +1,6 @@
+@import "colors";
+@import "mixin";
+
 * {
   margin: 0;
   padding: 0;
@@ -5,74 +8,51 @@
 }
 
 html {
-  color: #1c1a1a;
+  color: $html_bg_black;
   font-family: Bahnschrift;
   scroll-behavior: smooth;
 }
 
-span {
-  font-weight: bold;
-  font-size: 24px;
-}
 .nav-content {
   display: grid;
   grid-template-columns: 6fr 6fr;
-  align-items:  center;
+  align-items: center;
   width: 100%;
   margin: auto;
-  background: #8f8a8a;
+  background: $nav_content_bg_grey;
 }
 
 .nav-content ul {
-list-style: none;
+  list-style: none;
   display: flex;
 }
 
 .nav-content ul li a {
-  color: rgb(10, 10, 23);
   padding: 1.5rem;
   font-weight: bold;
   font-size: 1.5rem;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   opacity: 0.6;
   text-decoration: none;
   list-style-type: none;
-
 }
+
 .nav-content ul li a:hover {
-  color: rgb(255, 255, 255);
+  color: $white;
   background: #ff1476;
 }
 
-// logo style
 .logoImg {
   width: 120px;
   height: auto;
 }
 
-//navigation bar style
-
 ul {
   list-style-type: none;
 }
 
-//main container style
-
-a.btn {
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
-  background-color: #F8C300;
-  opacity: 1;
-  text-decoration: none;
-}
-
 section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 100px 80px;
+  @include sectionStyle
 }
 
 .work-area, .contact {
@@ -85,6 +65,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 section h3.header-text {
   text-transform: uppercase;
   font-family: Calibri;
@@ -92,6 +73,7 @@ section h3.header-text {
   text-align: center;
   font-size: 45px;
 }
+
 section p {
   max-width: 700px;
   line-height: 2;
@@ -99,158 +81,179 @@ section p {
   margin-bottom: 30px;
   text-align: center;
 }
-  .banner-area {
-    position: relative;
-    justify-content: center;
-    text-align: center;
-    min-height: 100vh;
-    color: #fff;
-  }
 
-  .banner-area .img-area {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    z-index: -1;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/image/bg/bg.jpg);
-    background-position: center center;
-  }
-
-  .banner-area h1 {
-    margin-bottom: 15px;
-    font-size: 60px;
-    color: #00FFFFFF;
-  }
-
-.center_div{
-  margin-bottom: 40px;
+//IMG section
+.banner-area {
+  position: relative;
+  @include alignItems;
+  min-height: 100vh;
+  color: $white;
 }
 
-  .banner-text {
-    opacity: 0;
-    margin-top: 100px;
-    animation: 1s anime-two 1s forwards;
-  }
-  @keyframes anime-two {
-    100% {
-      opacity: 1;
-      margin: 0;
-    }
-  }
+.banner-area .img-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/image/bg/bg.jpg);
+  background-position: center center;
+}
 
-  .services-area .content-area .single-service {
-    height: 300px;
-    padding: 20px;
-    flex-basis: 30%;
-    text-align: center;
-  }
+.banner-area h1 {
+  margin-bottom: 15px;
+  font-size: 60px;
+  color: $aqua;
+}
 
-  .single-service h2 {
-    margin-bottom: 15px;
-  }
-  .icon-area {
-    width: 150px;
-    height: 150px;
-    display: inline-block;
-    background: #262626;
-    border-radius: 50%;
-    margin-bottom: 20px;
-  }
-  // added icons-area
-  .on-air-concert {
-    background-image: url(/image/icon-area/on-air.jpg);
-  }
-  .club-concert {
-    background-image: url(/image/icon-area/club.jpg);
-  }
-  .quarantine-concert {
-    background-image: url(/image/icon-area/quarantine-concertjpg.PNG);
-  }
+//ANIMATION style
+.banner-text {
+  opacity: 0;
+  margin-top: 100px;
+  animation: 1s anime-two 1s forwards;
+}
 
-  .icon-area i {
-    color: #fff;
-    padding: 25px;
-    font-size: 30px;
+@keyframes anime-two {
+  100% {
+    opacity: 1;
+    margin: 0;
   }
+}
 
-  .work-area .content-area li {
-    padding: 5px;
-    flex-basis: 50%;
-    text-align: center;
-  }
-  .work-area img {
-    float: left;
-    width:  100%;
-    height: 350px;
-    object-fit: cover;
-  }
+.services-area .content-area .single-service {
+  height: 300px;
+  padding: 20px;
+  flex-basis: 30%;
+  text-align: center;
+}
 
-  .newsletter form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 60%;
-  }
-  .newsletter form .btn {
-    padding: 20px 40px;
-  }
-  .newsletter form input {
-    padding: 15px;
-    margin-right: 30px;
-    font-size: 18px;
-    color: #666;
-    flex: 1;
-    border: 1px solid #000;
-  }
+.single-service h2 {
+  margin-bottom: 15px;
+}
 
-  .contact .content-area .single-contact {
-    height: 300px;
-    padding: 20px;
-    flex-basis: 50%;
-    text-align: center;
-  }
-  .single-contact p {
-   text-align: left;
-  }
+.icon-area {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  background: $light_black;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
 
-  .single-contact input {
-    width: 100%;
-    height: 50px;
-    margin-bottom: 25px;
-    padding: 15px;
-    border: 1px solid #262626;
-  }
+.on-air-concert {
+  background-image: url(/image/icon-area/on-air.jpg);
+}
 
-  .single-contact input[type=submit] {
-    background: #F8C300;
-    border: none;
-    font-size: 16px;
-    font-family: Marlett;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
+.club-concert {
+  background-image: url(/image/icon-area/club.jpg);
+}
 
-  footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background: #262626;
-    color: #fff;
-    padding: 20px 0;
-  }
+.quarantine-concert {
+  background-image: url(/image/icon-area/quarantine-concertjpg.PNG);
+}
 
-  footer p {
-    text-transform: uppercase;
-    font-size: 14px;
-    opacity: 0.6;
-    align-self: center;
-    color: #F8C300;
-  }
-footer p a {
-  color: aqua;
+.icon-area i {
+  color: $white;
+  padding: 25px;
+  font-size: 30px;
+}
+
+.work-area .content-area li {
+  padding: 5px;
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.work-area img {
+  float: left;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+//SUBSCRIBE section style
+.newsletter {
+  background-image: url(/image/main-content/subscribe-logo.jpg);
+  background-size: 100%;
+  height: 300px;
+}
+
+.newsletter form {
+  display: flex;
+  @include alignItems;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.newsletter form .btn {
+  padding: 20px 40px;
+}
+
+a.btn {
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  background-color: $btn_bg_yellow;
+  opacity: 1;
   text-decoration: none;
 }
+
+.newsletter form input {
+  padding: 15px;
+  margin-right: 30px;
+  font-size: 18px;
+  color: #666;
+  flex: 1;
+  border: 1px solid $black;
+}
+
+.contact .content-area .single-contact {
+  height: 300px;
+  padding: 20px;
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.single-contact p {
+  text-align: left;
+}
+
+.single-contact input {
+  @include mainInput
+}
+
+.single-contact input[type=submit] {
+  @include inputSubmit
+}
+
+// FOOTER section style
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: $light_black;
+  color: $white;
+  padding: 20px 0;
+}
+
+footer p {
+  text-transform: uppercase;
+  font-size: 14px;
+  opacity: 0.6;
+  align-self: center;
+  color: $btn_bg_yellow;
+}
+
+span {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+footer p a {
+  color: $aqua;
+  text-decoration: none;
+}
+
